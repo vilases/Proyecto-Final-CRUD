@@ -47,7 +47,7 @@
                                         <a :href="producto.imagen"> <img width="60" :src="producto.imagen" :alt="producto.nombre"></a>
                                     </td>
                                     <td>
-                                        <a class="btn btn-primary" style="margin: 5px;" :href="'producto_update.html?id='+ producto.id" >Editar</a>
+                                        <a class="btn btn-primary" style="margin: 5px;" :href="'producto_editar.html?id='+ producto.id" >Editar</a>
                                         <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)" style="margin: 5px;" >Eliminar</button>
                                     </td>
                                 </tr>
