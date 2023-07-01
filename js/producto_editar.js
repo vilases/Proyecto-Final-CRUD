@@ -10,7 +10,7 @@ createApp({
             imagen:"",
             stock:0,
             precio:0,
-            url:'http://aldopehablo.pythonanywhere.com/productos',
+            url:'http://aldopehablo.pythonanywhere.com/productos/'+id,
         
         }
     },
@@ -48,7 +48,7 @@ createApp({
         fetch(this.url, options)
         .then(function () {
             alert("Registro modificado")
-            window.location.href = "./productos.html";
+            window.location.href = "../productos.html";
         })
         .catch(err => {
             console.error(err);

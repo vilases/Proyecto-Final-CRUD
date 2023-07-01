@@ -1,0 +1,103 @@
+/* style.css */
+
+body {
+    background-color: rgba(230, 230, 250,1);
+    color: rgba(240, 248, 255,1);
+    font-family: "Times";
+    font-size: 1.1em;
+    color:black;
+}
+
+a {
+    color: white;
+    font-size: 1.4em;
+}
+
+.gallery {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1em;
+    
+}
+
+.rounded {
+    border-radius: 40px;
+}
+
+#indeximg{
+    position: relative;
+    width:500px;
+    height:500px;
+    align:"center";
+    border-radius: 10px;  
+}
+
+#container {
+  height: 400px;
+  width: 800px;
+  position: relative;
+}
+#image {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  border-radius: 30px;
+  left: 0;
+  top: 0;
+}
+#text {
+  z-index: 100;
+  position: absolute;
+  color: green;
+  font-size: 24px;
+  font-weight: bold;
+  left: 410px;
+  top: 0px;
+}
+#container1 {
+  height: 40px;
+  width: 300px;
+  position: relative
+}
+
+  #image1{
+  position: absolute;
+  height: 40px;
+  width: 40px;
+ 
+  left: 0;
+  top: 0;
+}
+
+#text1{
+    position: absolute;
+    left:45px;
+    top:10px;
+    color: rgba(0,187,45,1);
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+#container2 {
+  height: 80px;
+  width: 300px;
+  position: relative
+}
+
+#image2 {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+ 
+  left: 0;
+  top: 0;
+}
+
+#text2{
+    position: absolute;
+    left:85px;
+    top:10px;
+    color: black;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+

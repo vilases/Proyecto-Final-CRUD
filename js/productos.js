@@ -1,8 +1,9 @@
 const { createApp } = Vue
 createApp({
 data() {
-   
+    
     return {
+        datos:'',
         productos:[],
         url:'http://aldopehablo.pythonanywhere.com/productos', // si ya lo subieron a pythonanywhere
         error:false,
