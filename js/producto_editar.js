@@ -10,7 +10,7 @@ createApp({
             imagen:"",
             stock:0,
             precio:0,
-            url:'http://aldopehablo.pythonanywhere.com/productos/'+id,
+            url:'//aldopehablo.pythonanywhere.com/productos/'+id,
         
         }
     },

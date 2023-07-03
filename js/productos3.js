@@ -9,7 +9,7 @@ createApp({
             datos: '',
             productos: [],
             productosSearch:[],
-            url: 'http://aldopehablo.pythonanywhere.com/productos', // si ya lo subieron a pythonanywhere
+            url: '//aldopehablo.pythonanywhere.com/productos', // si ya lo subieron a pythonanywhere
             error: false,
             cargando: true,
             /*atributos para el guardar los valores del formulario */
@@ -22,7 +22,7 @@ createApp({
         }
     },
     methods: {
-        fetchData(url,search=false) {
+        fetchData(url,search=" ") {
         
             fetch(url)
             .then(response => response.json())
@@ -107,9 +107,15 @@ createApp({
     created() {
         const params = new URLSearchParams(window.location.search);
         console.log(params);
-        this.datos = params.get('nombre').toLowerCase();
-        console.log(this.datos);
-        this.fetchData(this.url,this.datos)
+      
+        const nombre = params.get('nombre');
+        if (nombre) {
+          this.datos = nombre.toLowerCase();
+          console.log(this.datos);
+          this.fetchData(this.url, this.datos);
+        } else {
+          this.fetchData(this.url);
+        }
     },
 })
 .component('image-modal', appModal.component('image-modal'))
