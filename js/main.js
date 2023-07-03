@@ -14,13 +14,13 @@ document.getElementById("header").innerHTML=`
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MENU</a>
                     <div class="dropdown-menu" aria-labelledby="dropdownId">
-                        <a class="dropdown-item" href="productos.html">Productos</a>
+                        <a class="dropdown-item" href="productos3.html">Productos</a>
                         <a class="dropdown-item" href="#">Nosotros</a>
                         <a class="dropdown-item" href="#">Locales</a>
                     </div>
                 </li>
             </ul>
-            <form class="d-flex my-2 my-lg-0" action="productos1.html" method="GET">
+            <form class="d-flex my-2 my-lg-0" action="productos3.html" method="GET">
                 <input id="nombredato" name="nombre" class="form-control me-sm-2" type="text" placeholder="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0"type="submit">Search</button>
         </div>
