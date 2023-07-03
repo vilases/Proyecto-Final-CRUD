@@ -8,6 +8,7 @@ createApp({
         return {
             datos: '',
             productos: [],
+            productosSearch:[],
             url: 'http://aldopehablo.pythonanywhere.com/productos', // si ya lo subieron a pythonanywhere
             error: false,
             cargando: true,
@@ -21,14 +22,25 @@ createApp({
         }
     },
     methods: {
-        fetchData(url) {
+        fetchData(url,search=false) {
+        
             fetch(url)
-
-                .then(response => response.json())
-                .then(data => {
-                    this.productos = data;
-                    this.cargando = false
-                })
+            .then(response => response.json())
+            .then(data => {
+                this.productos = data;
+                
+                 for (let i=0; i<this.productos.length;i++){
+                            
+                            if (this.productos[i].nombre.toLowerCase().includes(search)){
+                                console.log('OK');
+                                this.productosSearch.push(this.productos[i]);
+                    }
+                }
+                console.log(this.productos)
+                console.log(this.productosSearch)
+                this.cargando=false;
+                
+            })
                 .catch(err => {
                     console.error(err);
                     this.error = true
@@ -93,7 +105,11 @@ createApp({
           }
     },
     created() {
-        this.fetchData(this.url)
+        const params = new URLSearchParams(window.location.search);
+        console.log(params);
+        this.datos = params.get('nombre').toLowerCase();
+        console.log(this.datos);
+        this.fetchData(this.url,this.datos)
     },
 })
 .component('image-modal', appModal.component('image-modal'))
