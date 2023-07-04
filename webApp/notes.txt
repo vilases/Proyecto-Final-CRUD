@@ -1,0 +1,13 @@
+En python anywhere consola
+$ mkvirtualenv .venv --python=/usr/bin/python3.10
+Luego testeo el environments
+$ which python
+$ workon .venv
+Subo mi archivo de requerimientos
+$ pip install -r requirements.txt
+
+
+Para los config files
+es necesario in config_prod.py / config_dev.py para produccion y desarrollo un ejemplo se encuentra en config_sample.py en el folder configEnv
+
+Para la config de python anywhere es necesario copiar / cambiar los parámetros para flask ejemplo en .wsgy.py

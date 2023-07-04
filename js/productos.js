@@ -2,7 +2,7 @@ import appModal from './modal.js';
 
 const { createApp } = Vue
 //var endPoint = "//aldopehablo.pythonanywhere.com";
-var endPoint = "http://127.0.0.1:5001";
+//var endPoint = "http://127.0.0.1:5001";
 createApp({
     data() {
 

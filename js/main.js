@@ -1,3 +1,6 @@
+//var endPoint = 'https://crisgPy.pythonanywhere.com/';
+var endPoint = 'http://127.0.0.1:5000/';
+
 document.getElementById("header").innerHTML=` 
 <div class="p-3 mb-2 bg-info-subtle text-emphasis-info" style="background-color: rgb(5, 254, 221)">
     <p class="text-center fs-1" >Bruma Sahumerios <img id="indeximg" src="../img/Bruma.png" style="width: 130px; height: 130px ;" /></p>

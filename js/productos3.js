@@ -3,7 +3,7 @@ import appModal from './modal.js';
 const { createApp } = Vue
 //var endPoint = "//aldopehablo.pythonanywhere.com";
 //var endPoint = 'http://127.0.0.1:5001/';
-var endPoint = 'https://crisgPy.pythonanywhere.com/';
+//var endPoint = 'https://crisgPy.pythonanywhere.com/';
 createApp({
     data() {
         return {
@@ -23,6 +23,7 @@ createApp({
             imagePreview: "", //preview image
             endPoint: endPoint,
             backUrl: '/productos3.html',
+            formSubmitted: false,
         }
     },
     methods: {
@@ -68,12 +69,27 @@ createApp({
             this.imagen = file;
             this.imagePreview = URL.createObjectURL(file); // Generar la URL de vista previa de la imagen
         },
+        validarFormulario() {
+            // Validar el formulario antes de enviarlo
+            console.log(this.$refs.addForm)
+            if (this.$refs.addForm.checkValidity()) {
+                // todo ok
+                this.formSubmitted = true;
+                this.grabar();
+            } else {
+                // Mostrar los errores de validación
+                this.$refs.addForm.classList.add('was-validated');
+            }
+        },
         grabar() {
             let producto = {
                 nombre: this.nombre,
                 precio: this.precio,
                 stock: this.stock,
                 imagen: this.imagen
+            }
+            if (!this.nombre) {
+                return; // Se muestra el mensaje de error de forma automática con la validación de Bootstrap
             }
             var formData = new FormData(); // Crear un objeto FormData para enviar datos con archivos
             formData.append("nombre", producto.nombre);

@@ -1,11 +1,12 @@
-console.log(location.search) // lee los argumentos pasados a este formulario
+//console.log(location.search) // lee los argumentos pasados a este formulario
 var id = location.search.substr(4)
-console.log(id)
-var endPoint = 'https://crisgPy.pythonanywhere.com/';
+//console.log(id)
+// var endPoint = 'https://crisgPy.pythonanywhere.com/';
+// var endPoint = '//127.0.0.1:5000';
 const { createApp } = Vue
 createApp({
     data() {
-        console.log(endPoint)
+        //console.log(endPoint)
         return {
             id: 0,
             nombre: "",
@@ -40,7 +41,7 @@ createApp({
         },
         onImageChange(event) {
             const file = event.target.files[0];
-            console.log(file);
+            //console.log(file);
             this.imagen = file;
             this.imagePreview = URL.createObjectURL(file); // Generar la URL de vista previa de la imagen
           },
@@ -63,15 +64,23 @@ createApp({
             }
             var self = this;
             fetch(this.url, options)
-                .then(function () {
-                    alert("Registro modificado")
-                    window.location.href = self.backUrl;
-                    //window.location.href = "./productos3.html";
-                })
-                .catch(err => {
-                    console.error(err);
-                    alert("Error al Modificar")
-                })
+            .then(function(response) {
+                //console.log('response::',response)
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Request failed with status ' + response.status);
+                }
+            })
+            .then(function(data) {
+                //console.log(self.backUrl,data)
+                alert("Registro modificado")
+                window.location.href = self.backUrl;
+            })
+            .catch(function(err) {
+                console.error(err);
+                alert("Error al Modificar")
+            });
         },
         cancelar(){
             window.location.href = this.backUrl;
