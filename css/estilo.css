@@ -100,4 +100,26 @@ a {
     font-size: 23px;
     font-weight: bold;
     text-decoration: none;
-
+}
+#modalImage{
+  max-width: 100%;
+}
+.max-height-container {
+  max-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 5px;
+}
+.max-height-container img{
+  max-height: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.custom-card {
+  max-width: 600px;
+  background-color: #f8f8f8;
+  margin: 20px auto;
+  padding: 20px;
+}

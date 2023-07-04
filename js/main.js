@@ -1,3 +1,5 @@
+//var endPoint = 'http://127.0.0.1:5001/';
+
 document.getElementById("header").innerHTML=` 
 <div class="p-3 mb-2 bg-info-subtle text-emphasis-info" style="background-color: rgb(5, 254, 221)">
     <p class="text-center fs-1" >Bruma Sahumerios <img id="indeximg" src="../img/Bruma.png" style="width: 130px; height: 130px ;" /></p>
@@ -20,8 +22,8 @@ document.getElementById("header").innerHTML=`
                     </div>
                 </li>
             </ul>
-            <form class="d-flex my-2 my-lg-0" action="productos1.html" method="GET">
-                <input id="nombredato" name="nombre" class="form-control me-sm-2" type="text" placeholder="Search">
+            <form class="d-flex my-2 my-lg-0" action="./productos3.html" method="GET">
+                <input id="nombredato" name="nombre" class="form-control me-sm-2" type="text" placeholder="Search" v-model="nombredato">
                 <button class="btn btn-outline-success my-2 my-sm-0"type="submit">Search</button>
         </div>
     </div>
@@ -40,3 +42,5 @@ document.getElementById("footer").innerHTML=`<h2><u><font size="3">Contactanos:<
 <p>
     <br>
 </p>`
+
+
