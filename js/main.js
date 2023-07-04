@@ -30,18 +30,14 @@ document.getElementById("header").innerHTML=`
     </div>
 </nav>
 `
-document.getElementById("footer").innerHTML=`<h2><u><font size="3">Contactanos:</font></u></h2>
-<div id="container1">
-  <img id="image1" src="../img/wap.png" style="width:50px"/>
-  <a id="text1" href="https://api.whatsapp.com/send?phone=541131258499">Bruma Wap</a>
+document.getElementById("footer").innerHTML=`<h2><u>Contactanos:</u></h2>
+<div class="contact-container">
+  <img class="contact-icon" src="../img/wap.png" alt="WhatsApp" />
+  <a class="contact-link" href="https://api.whatsapp.com/send?phone=541131258499">Bruma Wap</a>
 </div>
-
-<div id="container1">
-  <img id="image1" src="../img/inst.png"style="width:50px" />
-  <a id="text1" href = "https://instagram.com/bruma_sahumerios?igshid=YmMyMTA2M2Y=">@bruma_sahumerios</a>
-</div>
-<p>
-    <br>
-</p>`
+<div class="contact-container">
+  <img class="contact-icon" src="../img/inst.png" alt="Instagram" />
+  <a class="contact-link" href="https://instagram.com/bruma_sahumerios?igshid=YmMyMTA2M2Y=">@bruma_sahumerios</a>
+</div>`
 
 

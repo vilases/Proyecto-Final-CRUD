@@ -3,9 +3,37 @@
 body {
     background-color: rgba(230, 230, 250,1);
     color: rgba(240, 248, 255,1);
-    font-family: "Times";
+    /*font-family: "Times";*/
     font-size: 1.1em;
     color:black;
+}
+#footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+#footer h2 {
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.contact-icon {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.contact-link {
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
 }
 
 a {
