@@ -1,5 +1,5 @@
-//var endPoint = 'https://crisgPy.pythonanywhere.com/';
-var endPoint = 'http://127.0.0.1:5000/';
+var endPoint = 'https://crisgPy.pythonanywhere.com/';
+//var endPoint = 'http://127.0.0.1:5000/';
 
 document.getElementById("header").innerHTML=` 
 <div class="p-3 mb-2 bg-info-subtle text-emphasis-info" style="background-color: rgb(5, 254, 221)">
