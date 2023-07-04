@@ -1,7 +1,6 @@
 console.log(location.search) // lee los argumentos pasados a este formulario
 var id = location.search.substr(4)
 console.log(id)
-var endPoint = 'http://127.0.0.1:5001/';
 var endPoint = 'https://crisgPy.pythonanywhere.com/';
 const { createApp } = Vue
 createApp({
@@ -17,8 +16,7 @@ createApp({
             url: endPoint+'productos/' + id,
             imagePreview: "", //preview image
             endPoint:endPoint,
-            backUrl:'./productos3.html'
-
+            backUrl: './productos3.html'
         }
     },
     methods: {
@@ -63,10 +61,12 @@ createApp({
                 method: 'PUT',
                 redirect: 'follow',
             }
+            var self = this;
             fetch(this.url, options)
                 .then(function () {
                     alert("Registro modificado")
-                    window.location.href = this.backUrl;
+                    window.location.href = self.backUrl;
+                    //window.location.href = "./productos3.html";
                 })
                 .catch(err => {
                     console.error(err);

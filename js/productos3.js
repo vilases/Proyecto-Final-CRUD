@@ -9,7 +9,7 @@ createApp({
         return {
             datos: '',
             productos: [],
-            productosSearch:[],
+            productosSearch: [],
             url: endPoint + '/productos', // si ya lo subieron a pythonanywhere
             error: false,
             cargando: true,
@@ -22,7 +22,7 @@ createApp({
             modalImageURL: '',
             imagePreview: "", //preview image
             endPoint: endPoint,
-            backUrl: './productos3.html'
+            backUrl: '/productos3.html',
         }
     },
     methods: {
@@ -87,10 +87,12 @@ createApp({
                 //headers: { 'Content-Type': 'application/json' },
                 redirect: 'follow'
             }
+            var self = this;
             fetch(this.url, options)
-                .then(function () {
-                    alert("Registro grabado")
-                    window.location.href = "./productos.html";
+                .then(() => {
+                    console.log(self);
+                    alert("Registro grabado");
+                    window.location.href = self.backUrl;
                 })
                 .catch(err => {
                     console.error(err);
@@ -126,18 +128,18 @@ createApp({
     created() {
         const params = new URLSearchParams(window.location.search);
         console.log(params);
-      
+
         const nombre = params.get('nombre');
         if (nombre) {
-          this.datos = nombre.toLowerCase();
-          console.log(this.datos);
-          if(typeof document.getElementById('nombredato') != 'undefined'){
-            document.getElementById('nombredato').value=this.datos;
-          }
-          
-          this.fetchData(this.url, this.datos);
+            this.datos = nombre.toLowerCase();
+            console.log(this.datos);
+            if (typeof document.getElementById('nombredato') != 'undefined') {
+                document.getElementById('nombredato').value = this.datos;
+            }
+
+            this.fetchData(this.url, this.datos);
         } else {
-          this.fetchData(this.url);
+            this.fetchData(this.url);
         }
     },
 })

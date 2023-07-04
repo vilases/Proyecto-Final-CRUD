@@ -1,5 +1,3 @@
-//var endPoint = 'http://127.0.0.1:5001/';
-
 document.getElementById("header").innerHTML=` 
 <div class="p-3 mb-2 bg-info-subtle text-emphasis-info" style="background-color: rgb(5, 254, 221)">
     <p class="text-center fs-1" >Bruma Sahumerios <img id="indeximg" src="../img/Bruma.png" style="width: 130px; height: 130px ;" /></p>
@@ -16,7 +14,7 @@ document.getElementById("header").innerHTML=`
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MENU</a>
                     <div class="dropdown-menu" aria-labelledby="dropdownId">
-                        <a class="dropdown-item" href="productos.html">Productos</a>
+                        <a class="dropdown-item" href="productos3.html">Productos</a>
                         <a class="dropdown-item" href="#">Nosotros</a>
                         <a class="dropdown-item" href="#">Locales</a>
                     </div>
